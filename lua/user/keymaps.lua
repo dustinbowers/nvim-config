@@ -374,7 +374,7 @@ vnoremap("L", "$<left>", { desc = "Visual - Jump to end of line" })
 vnoremap("H", "^", { desc = "Visual - Jump to beginning of line" })
 
 -- Paste without losing the contents of the register
-xnoremap("<leader>p", '"_dP', { desc = "Paste without losing contents of the register" })
+-- xnoremap("<leader>p", '"_dP', { desc = "Paste without losing contents of the register" })
 
 -- Move selected text up/down in visual mode
 vnoremap("<A-j>", ":m '>+1<CR>gv=gv", { desc = "Visual - move selected line Up" })

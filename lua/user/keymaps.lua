@@ -61,13 +61,13 @@ end, { desc = "KittyNavigateLeft, or NvimTmuxNavigateLeft or wincmd h" })
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
 -- Save with leader key
-nnoremap("<leader>w", "<cmd>w<cr>", { silent = false, desc = "Save with leader key" })
+nnoremap("<leader>w", "<cmd>w<CR>", { silent = false, desc = "Save with leader key" })
 
 -- Quit with leader key
-nnoremap("<leader>q", "<cmd>q<cr>", { silent = false, desc = "Quit with leader key" })
+nnoremap("<leader>q", "<cmd>q<CR>", { silent = false, desc = "Quit with leader key" })
 
 -- Save and Quit with leader key
-nnoremap("<leader>z", "<cmd>wq<cr>", { silent = false, desc = "Save and Quite with leader key" })
+nnoremap("<leader>z", "<cmd>wq<CR>", { silent = false, desc = "Save and Quite with leader key" })
 
 -- Map Oil to <leader>e
 nnoremap("<leader>e", function()
@@ -119,7 +119,7 @@ nnoremap("H", "^")
 nnoremap("U", "<C-r>", { desc = "Redo previous Undo" })
 
 -- Turn off highlighted results
-nnoremap("<leader>no", "<cmd>noh<cr>", { desc = "Turn off highlighted results" })
+nnoremap("<leader>no", "<cmd>noh<CR>", { desc = "Turn off highlighted results" })
 
 -- Diagnostics
 
@@ -169,34 +169,34 @@ end, { desc = "Open diagnostic float" })
 nnoremap("<leader>ld", vim.diagnostic.setqflist, { desc = "Quickfix [L]ist [D]iagnostics" })
 
 -- Navigate to next qflist item
-nnoremap("<leader>cn", ":cnext<cr>zz", { desc = "Goto next QuickFixList item" })
+nnoremap("<leader>cn", ":cnext<CR>zz", { desc = "Goto next QuickFixList item" })
 
 -- Navigate to previos qflist item
-nnoremap("<leader>cp", ":cprevious<cr>zz", { desc = "Goto previous QuickFixList item" })
+nnoremap("<leader>cp", ":cprevious<CR>zz", { desc = "Goto previous QuickFixList item" })
 
 -- Open the qflist
-nnoremap("<leader>co", ":copen<cr>zz", { desc = "Open QuickFixList" })
+nnoremap("<leader>co", ":copen<CR>zz", { desc = "Open QuickFixList" })
 
 -- Close the qflist
-nnoremap("<leader>cc", ":cclose<cr>zz", { desc = "Close QuickFixList" })
+nnoremap("<leader>cc", ":cclose<CR>zz", { desc = "Close QuickFixList" })
 
 -- Map MaximizerToggle (szw/vim-maximizer) to leader-m
-nnoremap("<leader>m", ":MaximizerToggle<cr>", { desc = "MaximizerToggle" })
+nnoremap("<leader>m", ":MaximizerToggle<CR>", { desc = "MaximizerToggle" })
 
 -- Resize split windows to be equal size
 nnoremap("<leader>=", "<C-w>=", { desc = "Resize split windows to be equal size" })
 
 -- Press leader f to format
-nnoremap("<leader>f", ":Format<cr>", { desc = "Format code" })
+nnoremap("<leader>f", ":Format<CR>", { desc = "Format code" })
 
 -- Press leader rw to rotate open windows
-nnoremap("<leader>rw", ":RotateWindows<cr>", { desc = "[R]otate [W]indows" })
+nnoremap("<leader>rw", ":RotateWindows<CR>", { desc = "[R]otate [W]indows" })
 
 -- Press gx to open the link under the cursor
-nnoremap("gx", ":sil !open <cWORD><cr>", { silent = true, desc = "Open link under the cusor" })
+nnoremap("gx", ":sil !open <cWORD><CR>", { silent = true, desc = "Open link under the cusor" })
 
 -- TSC autocommand keybind to run TypeScripts tsc
-nnoremap("<leader>tc", ":TSC<cr>", { desc = "[T]ypeScript [C]ompile" })
+nnoremap("<leader>tc", ":TSC<CR>", { desc = "[T]ypeScript [C]ompile" })
 
 -- Harpoon keybinds --
 -- Open harpoon ui
@@ -241,7 +241,7 @@ nnoremap("<leader>5", function()
 end, { desc = "Jump to Harpooned file #5" })
 
 -- Git keymaps --
-nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")
+nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<CR>")
 nnoremap("<leader>gf", function()
 	local cmd = {
 		"sort",
@@ -335,10 +335,11 @@ M.map_lsp_keybinds = function(buffer_number)
 end
 
 -- Symbol Outline keybind
-nnoremap("<leader>so", ":SymbolsOutline<cr>")
+nnoremap("<leader>so", ":SymbolsOutline<CR>")
 
 -- Tree
-nnoremap("<A-k>", "<cmd> NvimTreeToggle<cr>")
+--nnoremap("<A-k>", "<cmd> NvimTreeToggle<CR>")
+nnoremap("<A-k>", ":NvimTreeToggle<CR>:wincmd =<CR>")
 
 -- Vim Illuminate keybinds
 nnoremap("<leader>]", function()

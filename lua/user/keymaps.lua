@@ -57,6 +57,15 @@ nnoremap("<C-h>", function()
 	end
 end, { desc = "KittyNavigateLeft, or NvimTmuxNavigateLeft or wincmd h" })
 
+--
+-- Goto-Preview config
+nnoremap("<leader>pd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>")
+nnoremap("<leader>pt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>")
+nnoremap("<leader>pi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>")
+nnoremap("<leader>pD", "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>")
+nnoremap("<leader>pc", "<cmd>lua require('goto-preview').close_all_win()<CR>")
+nnoremap("<leader>pr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>")
+
 -- Swap between last two buffers
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
@@ -67,7 +76,7 @@ nnoremap("<leader>w", "<cmd>w<CR>", { silent = false, desc = "Save with leader k
 nnoremap("<leader>q", "<cmd>q<CR>", { silent = false, desc = "Quit with leader key" })
 
 -- Save and Quit with leader key
-nnoremap("<leader>z", "<cmd>wq<CR>", { silent = false, desc = "Save and Quite with leader key" })
+nnoremap("<leader>z", "<cmd>wq<CR>", { silent = false, desc = "Save and Quit with leader key" })
 
 -- Map Oil to <leader>e
 nnoremap("<leader>e", function()

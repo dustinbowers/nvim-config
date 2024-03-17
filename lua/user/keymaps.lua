@@ -57,6 +57,11 @@ nnoremap("<C-h>", function()
 	end
 end, { desc = "KittyNavigateLeft, or NvimTmuxNavigateLeft or wincmd h" })
 
+-- quick tab selection
+nnoremap("<A-h>", "gT", { desc = "Previous tab" })
+nnoremap("<A-l>", "gt", { desc = "Next tab" })
+nnoremap("<leader>tc", ":tabclose<CR>", { desc = "Close tab" })
+
 --
 -- Goto-Preview config
 nnoremap("<leader>pd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>")
@@ -65,6 +70,12 @@ nnoremap("<leader>pi", "<cmd>lua require('goto-preview').goto_preview_implementa
 nnoremap("<leader>pD", "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>")
 nnoremap("<leader>pc", "<cmd>lua require('goto-preview').close_all_win()<CR>")
 nnoremap("<leader>pr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>")
+
+-- Fzf-lua
+nnoremap("<leader>fp", ":FzfLua grep_project<CR>", { desc = "[F]zf grep [P]roject" })
+nnoremap("<leader>fb", ":FzfLua grep_curbuf<CR>", { desc = "[F]zf grep current [B]uffer" })
+nnoremap("<leader>fw", ":FzfLua grep_cword<CR>", { desc = "[F]zf grep [W]ord under cursor" })
+nnoremap("<leader>fg", ":FzfLua grep<CR>", { desc = "[F]zf [G]rep" })
 
 -- Swap between last two buffers
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
@@ -203,9 +214,6 @@ nnoremap("<leader>rw", ":RotateWindows<CR>", { desc = "[R]otate [W]indows" })
 
 -- Press gx to open the link under the cursor
 nnoremap("gx", ":sil !open <cWORD><CR>", { silent = true, desc = "Open link under the cusor" })
-
--- TSC autocommand keybind to run TypeScripts tsc
-nnoremap("<leader>tc", ":TSC<CR>", { desc = "[T]ypeScript [C]ompile" })
 
 -- Harpoon keybinds --
 -- Open harpoon ui
@@ -362,9 +370,9 @@ nnoremap("<leader>[", function()
 end, { desc = "Illuminate: Goto previous reference" })
 
 -- Open Copilot panel
-nnoremap("<leader>oc", function()
-	require("copilot.panel").open({})
-end, { desc = "[O]pen [C]opilot panel" })
+-- nnoremap("<leader>oc", function()
+-- 	require("copilot.panel").open({})
+-- end, { desc = "[O]pen [C]opilot panel" })
 
 -- nvim-ufo keybinds
 nnoremap("zR", require("ufo").openAllFolds)

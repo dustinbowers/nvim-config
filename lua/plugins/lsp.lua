@@ -88,7 +88,8 @@ return {
 				marksman = {},
 				ocamllsp = {},
 				prismals = {},
-				pyright = {},
+				-- pyright = {}, -- Doesn't support auto-formatting :(
+				pylsp = {},
 				solidity = {},
 				sqlls = {},
 				tailwindcss = {

@@ -30,6 +30,11 @@ return {
 				ui = {
 					border = "rounded",
 				},
+				opts = {
+					ensure_installed = {
+						"debugpy",
+					},
+				},
 			})
 
 			-- Configure mason to auto install servers
@@ -73,7 +78,17 @@ return {
 				-- clangd = {},
 				cssls = {},
 				gleam = {},
-				gopls = {},
+				gopls = {
+					settings = {
+						gopls = {
+							analyses = {
+								unusedparams = true,
+							},
+							staticcheck = true,
+							gofumpt = true,
+						},
+					},
+				},
 				graphql = {},
 				html = {},
 				jsonls = {},
@@ -90,6 +105,7 @@ return {
 				prismals = {},
 				-- pyright = {}, -- Doesn't support auto-formatting :(
 				pylsp = {},
+				rust_analyzer = {},
 				solidity = {},
 				sqlls = {},
 				tailwindcss = {

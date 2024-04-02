@@ -179,26 +179,26 @@ nnoremap("[w", function()
 	vim.api.nvim_feedkeys("zz", "n", false)
 end, { desc = "Goto previous warning diagnostic" })
 
-nnoremap("<leader>d", function()
-	vim.diagnostic.open_float({
-		border = "rounded",
-	})
-end, { desc = "Open diagnostic float" })
-
--- Place all dignostics into a qflist
-nnoremap("<leader>ld", vim.diagnostic.setqflist, { desc = "Quickfix [L]ist [D]iagnostics" })
-
--- Navigate to next qflist item
-nnoremap("<leader>cn", ":cnext<CR>zz", { desc = "Goto next QuickFixList item" })
-
--- Navigate to previos qflist item
-nnoremap("<leader>cp", ":cprevious<CR>zz", { desc = "Goto previous QuickFixList item" })
-
--- Open the qflist
-nnoremap("<leader>co", ":copen<CR>zz", { desc = "Open QuickFixList" })
-
--- Close the qflist
-nnoremap("<leader>cc", ":cclose<CR>zz", { desc = "Close QuickFixList" })
+-- nnoremap("<leader>d", function()
+-- 	vim.diagnostic.open_float({
+-- 		border = "rounded",
+-- 	})
+-- end, { desc = "Open diagnostic float" })
+--
+-- -- Place all dignostics into a qflist
+-- nnoremap("<leader>ld", vim.diagnostic.setqflist, { desc = "Quickfix [L]ist [D]iagnostics" })
+--
+-- -- Navigate to next qflist item
+-- nnoremap("<leader>cn", ":cnext<CR>zz", { desc = "Goto next QuickFixList item" })
+--
+-- -- Navigate to previos qflist item
+-- nnoremap("<leader>cp", ":cprevious<CR>zz", { desc = "Goto previous QuickFixList item" })
+--
+-- -- Open the qflist
+-- nnoremap("<leader>co", ":copen<CR>zz", { desc = "Open QuickFixList" })
+--
+-- -- Close the qflist
+-- nnoremap("<leader>cc", ":cclose<CR>zz", { desc = "Close QuickFixList" })
 
 -- Map MaximizerToggle (szw/vim-maximizer) to leader-m
 nnoremap("<leader>m", ":MaximizerToggle<CR>", { desc = "MaximizerToggle" })
@@ -214,6 +214,12 @@ nnoremap("<leader>rw", ":RotateWindows<CR>", { desc = "[R]otate [W]indows" })
 
 -- Press gx to open the link under the cursor
 nnoremap("gx", ":sil !open <cWORD><CR>", { silent = true, desc = "Open link under the cusor" })
+
+-- Debugger --
+nnoremap("<leader>db", ":DapToggleBreakpoint<CR>")
+nnoremap("<leader>dpr", function()
+	require("dap-python").test_method()
+end, { desc = "[D]ebug [P]ython [R]un" })
 
 -- Harpoon keybinds --
 -- Open harpoon ui

@@ -25,6 +25,7 @@ return {
 					"markdown",
 					"ocaml",
 					"ocaml_interface",
+					"rust",
 					"prisma",
 					"tsx",
 					"typescript",

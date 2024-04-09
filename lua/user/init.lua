@@ -10,3 +10,7 @@ require("user.vertical_help")
 require("user.edit_text")
 -- require("user.kitty_autocmds")
 require("user.toggle_diagnostics")
+
+vim.cmd("colorscheme kanagawa-wave")
+-- vim.cmd("colorscheme kanagawa-dragon")
+-- vim.cmd("colorscheme kanagawa-lotus")

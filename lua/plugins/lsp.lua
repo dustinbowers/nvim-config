@@ -33,6 +33,9 @@ return {
 				opts = {
 					ensure_installed = {
 						"debugpy",
+            "eslint-lsp",
+            "typescript-language-server",
+            "tailwindcss-language-server",
 					},
 				},
 			})

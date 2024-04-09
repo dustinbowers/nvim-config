@@ -380,9 +380,10 @@ end, { desc = "Illuminate: Goto previous reference" })
 -- 	require("copilot.panel").open({})
 -- end, { desc = "[O]pen [C]opilot panel" })
 
--- nvim-ufo keybinds
-nnoremap("zR", require("ufo").openAllFolds)
-nnoremap("zM", require("ufo").closeAllFolds)
+-- nvim-ufo keybinds 
+-- Disabling plugins/ufo.lua for now, it bugs treesitter
+-- nnoremap("zR", require("ufo").openAllFolds)
+-- nnoremap("zM", require("ufo").closeAllFolds)
 
 -- Insert --
 -- Map jj to <esc>

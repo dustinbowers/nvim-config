@@ -362,7 +362,7 @@ nnoremap("<leader>so", ":SymbolsOutline<CR>")
 
 -- Tree
 --nnoremap("<A-k>", "<cmd> NvimTreeToggle<CR>")
-nnoremap("<A-k>", ":NvimTreeToggle<CR>:wincmd =<CR>")
+nnoremap("<A-o>", ":NvimTreeToggle<CR>:wincmd =<CR>")
 
 -- Vim Illuminate keybinds
 nnoremap("<leader>]", function()

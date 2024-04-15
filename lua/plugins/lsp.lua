@@ -176,7 +176,7 @@ return {
 				})
 			end
 
-			-- Congifure LSP linting, formatting, diagnostics, and code actions
+			-- Congfigure LSP linting, formatting, diagnostics, and code actions
 			local formatting = null_ls.builtins.formatting
 			local diagnostics = null_ls.builtins.diagnostics
 			local code_actions = null_ls.builtins.code_actions
@@ -185,9 +185,9 @@ return {
 				border = "rounded",
 				sources = {
 					-- formatting
-					formatting.prettier,
 					formatting.stylua,
 					formatting.ocamlformat,
+					require("null-ls").builtins.formatting.prettierd,
 
 					-- diagnostics
 					-- diagnostics.eslint_d.with({

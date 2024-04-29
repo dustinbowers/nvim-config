@@ -16,6 +16,20 @@ local TERM = os.getenv("TERM")
 -- Disable Space bar since it'll be used as the leader key
 nnoremap("<space>", "<nop>")
 
+-- Do things without affecting the registers
+nnoremap("x", '"_x')
+nnoremap("<Leader>p", '"0p')
+nnoremap("<Leader>P", '"0P')
+nnoremap("<Leader>p", '"0p')
+nnoremap("<Leader>c", '"_c')
+nnoremap("<Leader>C", '"_C')
+vnoremap("<Leader>c", '"_c')
+vnoremap("<Leader>C", '"_C')
+nnoremap("<Leader>d", '"_d')
+nnoremap("<Leader>D", '"_D')
+vnoremap("<Leader>d", '"_d')
+vnoremap("<Leader>D", '"_D')
+
 -- Window +  better kitty navigation
 nnoremap("<C-j>", function()
 	if vim.fn.exists(":KittyNavigateDown") ~= 0 and TERM == "xterm-kitty" then
@@ -380,7 +394,7 @@ end, { desc = "Illuminate: Goto previous reference" })
 -- 	require("copilot.panel").open({})
 -- end, { desc = "[O]pen [C]opilot panel" })
 
--- nvim-ufo keybinds 
+-- nvim-ufo keybinds
 -- Disabling plugins/ufo.lua for now, it bugs treesitter
 -- nnoremap("zR", require("ufo").openAllFolds)
 -- nnoremap("zM", require("ufo").closeAllFolds)

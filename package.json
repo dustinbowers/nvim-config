@@ -3,6 +3,8 @@
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.22.0"
+    "eslint-plugin-vue": "^9.22.0",
+    "prettier": "3.2.5",
+    "@fsouza/prettierd": "^0.25.3"
   }
 }

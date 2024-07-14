@@ -31,46 +31,46 @@ vnoremap("<Leader>d", '"_d')
 vnoremap("<Leader>D", '"_D')
 
 -- Window +  better kitty navigation
--- nnoremap("<C-j>", function()
--- 	if vim.fn.exists(":KittyNavigateDown") ~= 0 and TERM == "xterm-kitty" then
--- 		vim.cmd.KittyNavigateDown()
--- 	elseif vim.fn.exists(":NvimTmuxNavigateDown") ~= 0 then
--- 		vim.cmd.NvimTmuxNavigateDown()
--- 	else
--- 		vim.cmd.wincmd("j")
--- 	end
--- end, { desc = "KittyNavigateDown, or NvimTmuxNavigateDown or wincmd j" })
---
--- nnoremap("<C-k>", function()
--- 	if vim.fn.exists(":KittyNavigateUp") ~= 0 and TERM == "xterm-kitty" then
--- 		vim.cmd.KittyNavigateUp()
--- 	elseif vim.fn.exists(":NvimTmuxNavigateUp") ~= 0 then
--- 		vim.cmd.NvimTmuxNavigateUp()
--- 	else
--- 		vim.cmd.wincmd("k")
--- 	end
--- end, { desc = "KittyNavigateUp, or NvimTmuxNavigateUp or wincmd k" })
---
--- nnoremap("<C-l>", function()
--- 	if vim.fn.exists(":KittyNavigateRight") ~= 0 and TERM == "xterm-kitty" then
--- 		vim.cmd.KittyNavigateRight()
--- 	elseif vim.fn.exists(":NvimTmuxNavigateRight") ~= 0 then
--- 		vim.cmd.NvimTmuxNavigateRight()
--- 	else
--- 		vim.cmd.wincmd("l")
--- 	end
--- end, { desc = "KittyNavigateRight, or NvimTmuxNavigateRight or wincmd l" })
---
--- nnoremap("<C-h>", function()
--- 	if vim.fn.exists(":KittyNavigateLeft") ~= 0 and TERM == "xterm-kitty" then
--- 		vim.cmd.KittyNavigateLeft()
--- 	elseif vim.fn.exists(":NvimTmuxNavigateLeft") ~= 0 then
--- 		vim.cmd.NvimTmuxNavigateLeft()
--- 	else
--- 		vim.cmd.wincmd("h")
--- 	end
--- end, { desc = "KittyNavigateLeft, or NvimTmuxNavigateLeft or wincmd h" })
---
+nnoremap("<C-j>", function()
+  if vim.fn.exists(":KittyNavigateDown") ~= 0 and TERM == "xterm-kitty" then
+    vim.cmd.KittyNavigateDown()
+  elseif vim.fn.exists(":NvimTmuxNavigateDown") ~= 0 then
+    vim.cmd.NvimTmuxNavigateDown()
+  else
+    vim.cmd.wincmd("j")
+  end
+end, { desc = "KittyNavigateDown, or NvimTmuxNavigateDown or wincmd j" })
+
+nnoremap("<C-k>", function()
+  if vim.fn.exists(":KittyNavigateUp") ~= 0 and TERM == "xterm-kitty" then
+    vim.cmd.KittyNavigateUp()
+  elseif vim.fn.exists(":NvimTmuxNavigateUp") ~= 0 then
+    vim.cmd.NvimTmuxNavigateUp()
+  else
+    vim.cmd.wincmd("k")
+  end
+end, { desc = "KittyNavigateUp, or NvimTmuxNavigateUp or wincmd k" })
+
+nnoremap("<C-l>", function()
+  if vim.fn.exists(":KittyNavigateRight") ~= 0 and TERM == "xterm-kitty" then
+    vim.cmd.KittyNavigateRight()
+  elseif vim.fn.exists(":NvimTmuxNavigateRight") ~= 0 then
+    vim.cmd.NvimTmuxNavigateRight()
+  else
+    vim.cmd.wincmd("l")
+  end
+end, { desc = "KittyNavigateRight, or NvimTmuxNavigateRight or wincmd l" })
+
+nnoremap("<C-h>", function()
+  if vim.fn.exists(":KittyNavigateLeft") ~= 0 and TERM == "xterm-kitty" then
+    vim.cmd.KittyNavigateLeft()
+  elseif vim.fn.exists(":NvimTmuxNavigateLeft") ~= 0 then
+    vim.cmd.NvimTmuxNavigateLeft()
+  else
+    vim.cmd.wincmd("h")
+  end
+end, { desc = "KittyNavigateLeft, or NvimTmuxNavigateLeft or wincmd h" })
+
 -- quick tab selection
 nnoremap("<A-h>", "gT", { desc = "Previous tab" })
 nnoremap("<A-l>", "gt", { desc = "Next tab" })

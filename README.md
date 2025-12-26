@@ -3,6 +3,7 @@
 ### Requirements
 
 - neovim >= 0.8
+- npm
 
 
 ### Basic install
@@ -13,9 +14,16 @@ cd ~/.config/nvim
 npm install
 ```
 
+Mason *should* auto-install plugins when `nvim` is launched, but if it doesn't then use:
+```
+:MasonInstall
+```
+
 ---
 
-### Install latest neovim for ARM64 (Ubuntu)
+### Upgrading Neovim
+
+#### For ARM64 (Ubuntu):
 
 ```bash
 cd /tmp
@@ -27,3 +35,4 @@ sudo ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
 # this is necessary on ubuntu to stop `nvim` from defaulting to /usr/bin/nvim
 sudo update-alternatives --install /usr/bin/nvim nvim /usr/local/bin/nvim 110
 ```
+

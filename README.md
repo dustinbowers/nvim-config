@@ -7,7 +7,7 @@
 
 ### Basic install
 
-```
+```bash
 git clone https://github.com/dustinbowers/nvim-config.git ~/.config/nvim
 cd ~/.config/nvim
 npm install
@@ -17,7 +17,7 @@ npm install
 
 ### Install latest neovim for ARM64 (Ubuntu)
 
-```
+```bash
 cd /tmp
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux-arm64.tar.gz
 tar -zxf nvim-linux-arm64.tar.gz
